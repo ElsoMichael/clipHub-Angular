@@ -1,0 +1,163 @@
+<!-- Apply Header Here -->
+<app-header></app-header>
+
+<!-- Start Of Bootstrap container-fluid -->
+<div class="container-fluid">
+
+  <!-- PlaceHolder for Fast Pace Moveing -->
+  <ul class="nav nav-pills">
+    <li><a href="#all">All</a></li>
+    <li><a href="#today">Today</a></li>
+    <li><a href="#week">Week</a></li>
+    <li><a href="#month">Month</a></li>
+  </ul>
+
+<!-- Start Of All Time Clips -->
+
+  <!-- Display All Time Best Clips -->
+  <div id="all" class="col-lg-12">
+
+    <!-- Title Card -->
+    <h2>All Time Top Clips</h2>
+    <hr>
+
+    <!-- Loop Through Request -->
+    <div *ngFor="let clip of clipAll" class="col-lg-3">
+
+      <div>
+        <div>
+
+          <!-- Link of Video With Img Placeholder -->
+          <a href="{{ clip.embed_url }}"><img src="{{ clip.thumbnails.medium }}"></a>
+
+        </div>
+        <div>
+
+          <!-- Clip Info -->
+          <span class="title">{{ clip.title }}</span>
+          <!-- <span class="glyphicon glyphicon-thumbs-up">{{ clip.views }}</span> -->
+          <!-- <span>Stream: {{ clip.broadcaster.display_name }}</span>
+          <span>By: {{ clip.curator.display_name }}</span> -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Link To More All Time Best Clips -->
+    <a [routerLink]="['all']"> View Details </a>
+
+  </div>
+<!-- End Of All Time Clips -->
+
+
+<!-- Start Of Todays Top Clips -->
+  <!-- Display Todays Top Clips -->
+  <div id="today" class="col-lg-12">
+
+    <!-- Title Card -->
+    <h2>Today's Top Clips</h2>
+    <hr>
+
+    <!-- Loop Through Request -->
+    <div *ngFor="let clip of clipToday" class="col-lg-3">
+
+      <div>
+        <div>
+
+          <!-- Link of Video With Img Placeholder -->
+          <a href="{{ clip.embed_url }}"><img src="{{ clip.thumbnails.medium }}"></a>
+
+        </div>
+        <div>
+
+          <!-- Clip Info -->
+          <span class="title">{{ clip.title }}</span>
+          <!-- <span>{{ clip.views }}</span>
+          <span>Stream: {{ clip.broadcaster.display_name }}</span>
+          <span>By: {{ clip.curator.display_name }}</span> -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Link To More Clips of the Day -->
+    <a [routerLink]="['today']"> View Details </a>
+
+  </div>
+<!-- End Of Todays Top Clips -->
+
+
+<!-- Start Of Weekly Top Clips -->
+  <!-- Display Weekly Best Clips -->
+  <div id="week" class="col-lg-12">
+
+    <!-- Title Card -->
+    <h2>Top Clips of the Week</h2>
+    <hr>
+
+    <!-- Loop Through Request -->
+    <div *ngFor="let clip of clipWeek" class="col-lg-3">
+
+      <div>
+        <div>
+
+          <!-- Link of Video With Img Placeholder -->
+          <a href="{{ clip.embed_url }}"><img src="{{ clip.thumbnails.medium }}"></a>
+
+        </div>
+        <div>
+
+          <!-- Clip Info -->
+          <span class="title">{{ clip.title }}</span>
+          <!-- <span>{{ clip.views }}</span>
+          <span>Stream: {{ clip.broadcaster.display_name }}</span>
+          <span>By: {{ clip.curator.display_name }}</span> -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Link To More Clips of the Week -->
+    <a [routerLink]="['week']"> View Details </a>
+
+  </div>
+<!-- End Of Weekly Top Clips -->
+
+
+<!-- Start Of Monthly Best Top Clips -->
+  <!-- Display Monthly Best Clips -->
+  <div id="month" class="col-lg-12">
+
+    <!-- Title Card -->
+    <h2>Top Clips of the Month</h2>
+    <hr>
+
+    <!-- Loop Through Request -->
+    <div *ngFor="let clip of clipMonth" class="col-lg-3">
+
+      <div>
+        <div>
+
+          <!-- Link of Video With Img Placeholder -->
+          <a href="{{ clip.embed_url }}"><img src="{{ clip.thumbnails.medium }}"></a>
+
+        </div>
+        <div>
+
+          <!-- Clip Info -->
+          <span class="title">{{ clip.title }}</span>
+          <!-- <span>{{ clip.views }}</span>
+          <span>Stream: {{ clip.broadcaster.display_name }}</span>
+          <span>By: {{ clip.curator.display_name }}</span> -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Link To More Clips of the Month -->
+    <a [routerLink]="['month']"> View Details </a>
+
+  </div>
+<!-- End Of Monthly Top Clips -->
+
+</div> <!-- Closing container-fluid -->

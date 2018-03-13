@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+img {
+  width: 370px;
+  height: 230px;
+}
+
+.title {
+  font-size: 14px;
+  display: inline-block;
+  width: 330px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.details {
+  font-size: 12px;
+  display: inline;
+}
+
+.details1 {
+  font-size: 12px;
+  display: inline;
+  text-align: right;
+}
+
+.brand {
+  height: 60px;
+  width: 106px;
+}
