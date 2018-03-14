@@ -13,6 +13,7 @@ import { ClipAllComponent } from './Clips/clip-all/clip-all.component';
 import { ClipTodayComponent } from './Clips/clip-today/clip-today.component';
 import { ClipWeekComponent } from './Clips/clip-week/clip-week.component';
 import { ClipMonthComponent } from './Clips/clip-month/clip-month.component';
+import { ClipInfoComponent } from './Clips/clip-info/clip-info.component';
 
 // Import RouterModule
 import { RouterModule } from "@angular/router";
@@ -26,7 +27,8 @@ import { routes } from './app.routing';
     ClipTodayComponent,
     ClipWeekComponent,
     ClipMonthComponent,
-    HeaderComponent
+    HeaderComponent,
+    ClipInfoComponent
   ],
   imports: [
     BrowserModule,

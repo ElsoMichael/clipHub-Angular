@@ -7,7 +7,6 @@ import { TwitchApiCallsService } from '../../services/twitch-api-calls.service';
   selector: 'app-clips-list',
   templateUrl: './clips-list.component.html',
   styleUrls: ['./clips-list.component.css'],
-
   // Call The Provider For Twitch Api
   providers: [TwitchApiCallsService]
 })

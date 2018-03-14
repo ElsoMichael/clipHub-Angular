@@ -224,4 +224,26 @@ export class TwitchApiCallsService {
       .then((res: Response) => res.json())
   }
 
+  // Get Clip Info
+  getClipInfo(id) {
+    // Append Twitch Api Headers
+    let headers = new Headers();
+
+    // Needed Accept JSON File
+    headers.append('Accept', 'application/vnd.twitchtv.v5+json');
+
+    // Add Twitch Api Key Here
+    headers.append(/* Api Key */, /* Api Key Value*/);
+
+    // Request Options for Search
+    let opts = new RequestOptions();
+    opts.headers = headers;
+
+    // Api EndPoint
+    let url = `https://api.twitch.tv/kraken/clips/${id}`;
+
+    // Return Promise Base Response
+    return this.http.get(url, opts)
+      .map((res) => res.json())
+  }
 }
