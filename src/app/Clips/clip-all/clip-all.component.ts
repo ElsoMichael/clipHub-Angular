@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Import Service For Twitch Api
-import { TwitchApiCallsService } from '../../services/twitch-api-calls.service';
+import { TwitchApiCallsService } from '../../services/Apis/twitch-api-calls.service';
 
 @Component({
   selector: 'app-clip-all',
@@ -23,7 +23,7 @@ export class ClipAllComponent implements OnInit {
 
     // Function On Load
     this.clips.getAll()
-      .then((clip) => {
+      .subscribe((clip) => {
         // Call to Store Result
         this.clipAll = clip.clips;
       });

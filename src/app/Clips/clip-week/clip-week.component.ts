@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Import Service For Twitch Api
-import { TwitchApiCallsService } from '../../services/twitch-api-calls.service';
+import { TwitchApiCallsService } from '../../services/Apis/twitch-api-calls.service';
 
 @Component({
   selector: 'app-clip-week',
@@ -23,7 +23,7 @@ export class ClipWeekComponent implements OnInit {
 
     // Function On Load
     this.clips.getWeek()
-      .then((clips) => {
+      .subscribe((clips) => {
         // Call to Store Result
         this.clipWeek = clips.clips
       })

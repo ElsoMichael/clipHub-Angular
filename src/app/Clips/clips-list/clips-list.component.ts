@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Import Service For Twitch Api
-import { TwitchApiCallsService } from '../../services/twitch-api-calls.service';
+import { TwitchApiCallsService } from '../../services/Apis/twitch-api-calls.service';
 
 @Component({
   selector: 'app-clips-list',
@@ -26,28 +26,28 @@ export class ClipsListComponent implements OnInit {
 
     // Function On Load
     this.clips.getTop12All()
-      .then((clip) => {
+      .subscribe((clip) => {
         // Call to Store Result
         this.clipAll = clip.clips;
       });
 
     // Function On Load
     this.clips.getTop12Today()
-      .then((clips) => {
+      .subscribe((clips) => {
         // Call to Store Result
         this.clipToday = clips.clips
       })
 
     // Function On Load
     this.clips.getTop12Week()
-      .then((clips) => {
+      .subscribe((clips) => {
         // Call to Store Result
         this.clipWeek = clips.clips
       })
     
     // Function On Load
     this.clips.getTop12Month()
-      .then((clips) => {
+      .subscribe((clips) => {
         // Call to Store Result
         this.clipMonth = clips.clips
       })

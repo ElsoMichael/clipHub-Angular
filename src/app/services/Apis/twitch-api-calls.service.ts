@@ -3,8 +3,12 @@ import { Injectable } from '@angular/core';
 // Angulars HttpModule
 import { Http, Response, RequestOptions, Headers} from '@angular/http';
 
+// Import Observavle and Map
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
 // Import Promise Base Response
-import 'rxjs/add/operator/toPromise';
+// import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class TwitchApiCallsService {
@@ -24,7 +28,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -35,8 +39,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -50,7 +53,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -61,8 +64,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -77,7 +79,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -88,8 +90,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -103,7 +104,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -114,8 +115,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -130,7 +130,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -141,8 +141,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -156,7 +155,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -167,8 +166,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -183,7 +181,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -194,8 +192,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
 
@@ -209,7 +206,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -220,11 +217,10 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .toPromise()
-      .then((res: Response) => res.json())
+      .map((res: Response) => res.json())
   }
 
-  // Get Clip Info
+   // Get Clip Info
   getClipInfo(id) {
     // Append Twitch Api Headers
     let headers = new Headers();
@@ -233,7 +229,7 @@ export class TwitchApiCallsService {
     headers.append('Accept', 'application/vnd.twitchtv.v5+json');
 
     // Add Twitch Api Key Here
-    headers.append(/* Api Key */, /* Api Key Value*/);
+    headers.append('Client-ID', '4ttcqcnz5o85ibiapwctz6kklm3aii');
 
     // Request Options for Search
     let opts = new RequestOptions();
@@ -244,6 +240,7 @@ export class TwitchApiCallsService {
 
     // Return Promise Base Response
     return this.http.get(url, opts)
-      .map((res) => res.json())
+      .map((res: Response) => res.json())
   }
+
 }

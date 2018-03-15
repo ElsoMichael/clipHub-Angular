@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Import Service For Twitch Api
-import { TwitchApiCallsService } from '../../services/twitch-api-calls.service';
+import { TwitchApiCallsService } from '../../services/Apis/twitch-api-calls.service';
 
 @Component({
   selector: 'app-clip-month',
@@ -23,7 +23,7 @@ export class ClipMonthComponent implements OnInit {
 
     // Function On Load
     this.clips.getMonth()
-      .then((clips) => {
+      .subscribe((clips) => {
         // Call to Store Result
         this.clipMonth = clips.clips
       })
