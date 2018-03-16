@@ -1,0 +1,25 @@
+.gameCover {
+  padding: 0 2px;
+  margin: 0 auto;
+}
+
+.thumb {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  display: inline;
+}
+
+.text-inline {
+  display: inline;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .thumb {
+  width: 200%;
+} */

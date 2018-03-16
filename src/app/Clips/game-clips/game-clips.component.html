@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="col-lg-12">
+  
+      <!-- Title Card -->
+      <h2>Channel Clips</h2>
+      <hr>
+  
+      <!-- Loop Through Request -->
+      <div *ngFor="let clip of gameClips" class="col-lg-3">
+  
+        <div>
+          <div>
+  
+            <!-- Link of Video With Img Placeholder -->
+            <a href="{{ clip.embed_url }}"><img class="clipCover" src="{{ clip.thumbnails.medium }}"></a>
+  
+          </div>
+          <div>
+  
+            <!-- Clip Info -->
+            <span class="title">{{ clip.title }}</span>
+            <!-- <span class="glyphicon glyphicon-thumbs-up">{{ clip.views }}</span> -->
+            <!-- <span>Stream: {{ clip.broadcaster.display_name }}</span>
+            <span>By: {{ clip.curator.display_name }}</span> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

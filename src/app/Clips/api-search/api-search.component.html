@@ -1,0 +1,30 @@
+<form (ngSubmit)="searchInputGame()">
+  <input id="search" type="text" placeholder="giantwaffle" [(ngModel)]="newSearch" name="searchValue">
+</form>
+
+<div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-8 col-md-8">
+        <h1>Games</h1>
+        <div *ngFor="let game of searchedGame">
+          <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+            <a [routerLink]="['/game', game.name]"><img src="{{ game.box.medium }}" class="img-fluid center-block gameCover"></a>
+          <p class="title"><a [routerLink]="['/game', game.name]">{{ game.name }}</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 col-md-3">
+        <h1>Channels</h1>
+        <div *ngFor="let channel of searchedChannel">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          <a [routerLink]="['/channel', channel.display_name]"><img class="img-fluid thumb" src="{{ channel.logo }}"></a>
+          <p class="text-inline"><a [routerLink]="['/channel', channel.display_name]">{{ channel.display_name }}</a></p>
+          </div>
+          <!-- <p>Followers: {{ channel.followers }}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+

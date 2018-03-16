@@ -1,0 +1,17 @@
+<!-- Apply Header Here -->
+<!-- <app-header></app-header> -->
+
+<h3>Create New Post</h3>
+
+<form (ngSubmit)="addNewPosts()">
+
+  <label for="title-input"> Title</label>
+  <input id="new-post-title-input" type="text" placeholder="hi" [(ngModel)]="newPost.title" name="newPostTitleValue">
+  <br>
+
+  <label for="text-input"> Text </label>
+  <textarea id="new-post-text-input" type="text" placeholder="hi again" [(ngModel)]="newPost.text" name="newPostTextValue"></textarea>
+  <br>
+
+  <button> Submit </button>
+</form>
