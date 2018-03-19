@@ -1,17 +1,12 @@
-<!-- Apply Header Here -->
-<!-- <app-header></app-header> -->
+<form (ngSubmit)="saveNewPost()">
 
-<h3>Create New Post</h3>
-
-<form (ngSubmit)="addNewPosts()">
-
-  <label for="title-input"> Title</label>
-  <input id="new-post-title-input" type="text" placeholder="hi" [(ngModel)]="newPost.title" name="newPostTitleValue">
+  <label for="post-title-input"> Title </label>
+  <input id="post-title-input" type="text" placeholder="Title" [(ngModel)]="newPost.title" name="title">
   <br>
 
-  <label for="text-input"> Text </label>
-  <textarea id="new-post-text-input" type="text" placeholder="hi again" [(ngModel)]="newPost.text" name="newPostTextValue"></textarea>
+  <label for="post-details-input"> Details </label>
+  <input id="post-details-input" type="text" placeholder="Details" [(ngModel)]="newPost.details" name="details">
   <br>
 
-  <button> Submit </button>
+  <button> Save Post </button>
 </form>

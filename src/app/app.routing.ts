@@ -12,19 +12,25 @@ import { SignupComponent } from './Auth/signup/signup.component';
 import { LoginComponent } from './Auth/login/login.component';
 import { AuthLoggedOutComponent } from './auth/auth-logged-out/auth-logged-out.component';
 import { GameClipsComponent } from './Clips/game-clips/game-clips.component';
+import { ForumNewPostComponent } from './api/forum-new-post/forum-new-post.component';
+import { ForumComponent } from './api/forum/forum.component';
+import { ForumDetailsComponent } from './Api/forum-details/forum-details.component';
 
 // Path's
 export const routes: Routes = [
-  { path: '', component: ClipsListComponent },
-  { path: 'all', component: ClipAllComponent },
-  { path: 'today', component: ClipTodayComponent },
-  { path: 'week', component: ClipWeekComponent },
-  { path: 'month', component: ClipMonthComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'logmeout', component: AuthLoggedOutComponent },
-  { path: 'search', component: ApiSearchComponent },
-  { path: 'channel/:id', component: ChannelClipsComponent },
-  { path: 'game/:slug', component: GameClipsComponent },
-  { path: '**', redirectTo: '' }
+    { path: '', component: ClipsListComponent },
+    { path: 'all', component: ClipAllComponent },
+    { path: 'today', component: ClipTodayComponent },
+    { path: 'week', component: ClipWeekComponent },
+    { path: 'month', component: ClipMonthComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'logmeout', component: AuthLoggedOutComponent },
+    { path: 'search', component: ApiSearchComponent },
+    { path: 'channel/:id', component: ChannelClipsComponent },
+    { path: 'game/:slug', component: GameClipsComponent },
+    { path: 'newPost', component: ForumNewPostComponent },
+    { path: 'forum', component: ForumComponent },
+    { path: 'post/:id', component: ForumDetailsComponent },
+    { path: '**', redirectTo: '' }
 ];

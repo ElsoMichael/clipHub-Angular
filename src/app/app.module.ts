@@ -18,6 +18,7 @@ import { AuthLoggedOutComponent } from './auth/auth-logged-out/auth-logged-out.c
 // My Api
 import { ForumComponent } from './api/forum/forum.component';
 import { ForumNewPostComponent } from './api/forum-new-post/forum-new-post.component';
+import { ForumDetailsComponent } from './Api/forum-details/forum-details.component';
 
 // Twitch Clips Api Components
 import { ClipsListComponent } from './Clips/clips-list/clips-list.component';
@@ -32,6 +33,7 @@ import { GameClipsComponent } from './Clips/game-clips/game-clips.component';
 // Import RouterModule
 import { RouterModule } from "@angular/router";
 import { routes } from './app.routing';
+import { AuthService } from './services/Auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { routes } from './app.routing';
     ClipMonthComponent,
     ChannelClipsComponent,
     GameClipsComponent,
-    ApiSearchComponent
+    ApiSearchComponent,
+    ForumDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { routes } from './app.routing';
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

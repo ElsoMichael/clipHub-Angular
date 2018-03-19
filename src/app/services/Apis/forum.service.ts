@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
+// Import Map Operator
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -16,16 +17,24 @@ export class ForumService {
 
   getThisPost(id) {
     return this.http.get(`${this.Base_URL}/forum/${id}`)
-      .map((res) => res.json());
+    .toPromise()
+    .then((res: Response) => res.json());
   }
 
-  editPost(post) {
-    return this.http.put(`${this.Base_URL}/forum/${post.id}`, post)
-      .map((res) => res.json());
+  createPost(sendData) {
+    return this.http.post(`${this.Base_URL}/forum`, sendData, { withCredentials: true })
+    .toPromise()
+    .then((res: Response) => res.json());
+  }
+
+  editPost(id, edit) {
+    return this.http.put(`${this.Base_URL}/forum/${id}`, edit, { withCredentials: true })
+    .map((res: Response) => res.json());
   }
 
   removePost(id) {
-    return this.http.delete(`${this.Base_URL}/forum/${id}`)
-      .map((res) => res.json());
+    return this.http.delete(`${this.Base_URL}/forum/${id}`, { withCredentials: true })
+    .toPromise()
+    .then((res: Response) => res.json());
   }
 }
