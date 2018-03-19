@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ForumsApiService } from '../../services/Apis/forums-api.service';
+import { ForumService } from '../../services/Apis/forum.service';
 
 import { Router } from '@angular/router'
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router'
   selector: 'app-forum-new-post',
   templateUrl: './forum-new-post.component.html',
   styleUrls: ['./forum-new-post.component.css'],
-  providers: [ForumsApiService]
+  providers: [ForumService]
 })
 export class ForumNewPostComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class ForumNewPostComponent implements OnInit {
   }
 
   constructor(
-    private newPosts: ForumsApiService,
+    private newPosts: ForumService,
     private router: Router
   ) { }
 
