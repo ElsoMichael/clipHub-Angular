@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-9">
+      <h2 class="clip-title">{{ singleClip.title }}</h2>
+
+      <iframe
+        [src]="getEmbedUrl()"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        autoplay="false">
+      </iframe>
+    </div>
+
+    <div class="col-lg-3 col-spaceing">
+      <h1 class="text-center">Info</h1>
+      <h4 class="info-space backdrop">Channel: {{ singleClip.channel }}</h4>
+      <h4 class="info-space">Creator: {{ singleClip.creator }}</h4>
+      <h4 class="info-space backdrop">Views: {{ singleClip.view }}</h4>
+      <h4 class="info-space">Game: {{ singleClip.game }}</h4>
+      <h4 class="info-space text-center"><a href="{{ singleClip.twitchUrl }}">Channel Link!</a></h4>
+    </div>
+
+  </div>
+</div>
